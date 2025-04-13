@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mon Profil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <video autoplay muted loop id="bgVideo">
+    <source src="fond.mp4" type="video/mp4">
+  </video>
+
+  <header>
+    <h1 class="glitch">Mon Profil</h1>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <nav id="mobileMenu">
+    <a href="#accueil">Accueil</a>
+    <a href="#apropos">À propos</a>
+    <a href="#competences">Compétences</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="section-wrapper" id="accueil">
+    <section>
+      <h2>Accueil</h2>
+      <img src="me.jpg" alt="Photo de profil" class="profile-pic">
+      <p>Bienvenue sur mon profil ! Je suis ravi de vous présenter mon parcours.</p>
+    </section>
+  </div>
+
+  <div class="section-wrapper" id="apropos">
+    <section>
+      <h2>À propos</h2>
+      <p>
+        Je m'appelle <strong>Avotra</strong>, passionné par la cybersécurité, l'exploration de systèmes et le développement web.  
+        J'aime apprendre, comprendre les failles, créer des scripts utiles et me former constamment pour évoluer.  
+        Je veux devenir un expert en sécurité informatique et contribuer à la protection des données et des utilisateurs.  
+      </p>
+      <p style="margin-top: 15px;">J'adore cette chanson :</p>
+      <audio controls>
+        <source src="arcane.mp3" type="audio/mpeg">
+      </audio>
+    </section>
+  </div>
+
+  <div class="section-wrapper" id="competences">
+    <section>
+      <h2>Compétences</h2>
+      <ul>
+        <li>Cybersécurité (bases, reconnaissance, scripts)</li>
+        <li>Python (scripts)</li>
+        <li>HTML / CSS (création de sites web)</li>
+        <li>JavaScript (bases pour le web dynamique)</li>
+        <li>Linux (commandes de base, terminal)</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="section-wrapper" id="contact">
+    <section>
+      <h2>Contact</h2>
+      <p style="font-size: 1.1em;">
+        Besoin de me contacter ? Envoyez un signal dans le réseau. Je réponds vite. ⚡
+      </p>
+      <div style="display: flex; justify-content: center; gap: 15px; margin-top: 20px;">
+        <a href="https://www.facebook.com/AVOTRA.0001" target="_blank" title="Facebook">
+          <img src="facebook.png" width="40" alt="Facebook">
+        </a>
+        <a href="mailto:rakotoarisonavotra53@gmail.com" title="Email">
+          <img src="email.png" width="40" alt="Email">
+        </a>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('show-menu');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Courier New', monospace;
+    color: #fff;
+    background: #000;
+    text-align: center;
+  }
+
+  video#bgVideo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
+
+  header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h1.glitch {
+    font-size: 28px;
+    position: relative;
+    color: white;
+    animation: glitch 1s infinite;
+  }
+
+  h1.glitch::before,
+  h1.glitch::after {
+    content: "Mon Profil";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    opacity: 0.7;
+  }
+
+  h1.glitch::before {
+    animation: glitchTop 1s infinite;
+    color: #0ff;
+    top: -2px;
+    left: 2px;
+  }
+
+  h1.glitch::after {
+    animation: glitchBottom 1s infinite;
+    color: #f0f;
+    top: 2px;
+    left: -2px;
+  }
+
+  @keyframes glitch {
+    0% { transform: none; }
+    20% { transform: skew(-0.5deg, -0.9deg); }
+    40% { transform: skew(0.8deg, 0.4deg); }
+    60% { transform: skew(-1deg, -0.3deg); }
+    80% { transform: skew(0.3deg, 0.8deg); }
+    100% { transform: none; }
+  }
+
+  @keyframes glitchTop {
+    0%, 100% { clip: rect(0, 9999px, 0, 0); }
+    10% { clip: rect(0, 9999px, 15px, 0); }
+    50% { clip: rect(0, 9999px, 5px, 0); }
+  }
+
+  @keyframes glitchBottom {
+    0%, 100% { clip: rect(0, 9999px, 0, 0); }
+    10% { clip: rect(15px, 9999px, 30px, 0); }
+    50% { clip: rect(5px, 9999px, 10px, 0); }
+  }
+
+  .section-wrapper {
+    position: relative;
+    margin: 40px auto;
+    padding: 2px;
+    border-radius: 20px;
+    max-width: 800px;
+    background: linear-gradient(135deg, #0ff, #f0f, #00ff88, #0ff);
+    background-size: 400% 400%;
+    animation: borderAnim 6s linear infinite;
+  }
+
+  @keyframes borderAnim {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  section {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 30px 20px;
+    border-radius: 18px;
+    color: white;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 8px #0ff, 0 0 12px #f0f;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    margin-bottom: 15px;
+    box-shadow: 0 0 15px #0ff;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  nav a {
+    color: rgb(14, 240, 202);
+    padding: 10px 15px;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+  }
+
+  nav a:hover {
+    background-color: #444;
+  }
+
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .show-menu {
+    display: flex;
+  }
+
+  @media(min-width: 600px) {
+    nav {
+      display: flex !important;
+      flex-direction: row;
+    }
+
+    .menu-icon {
+      display: none;
+    }
+  }
+  audio{
+    border-radius: 19px;
+  }
